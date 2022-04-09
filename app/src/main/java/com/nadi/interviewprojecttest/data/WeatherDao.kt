@@ -8,10 +8,10 @@ import androidx.room.Query
 @Dao
 interface WeatherDao {
 
-    @Query("SELECT * From weather")
+    @Query("SELECT * FROM weather")
     fun getAll(): LiveData<List<WeatherEntity>>?
 
-    @Query("DELETE * FROM weather")
+    @Query("DELETE FROM weather")
     suspend fun deleteAll()
 
     @Query("SELECT * FROM weather WHERE id = :key ")
