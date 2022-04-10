@@ -4,7 +4,6 @@ import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Query
 
-
 @Dao
 interface WeatherDao {
 
@@ -13,6 +12,7 @@ interface WeatherDao {
 
     @Query("DELETE FROM weather")
     suspend fun deleteAll()
+
 
     @Query("SELECT * FROM weather WHERE id = :key ")
     suspend fun getSpecific(key: Long): WeatherEntity?
