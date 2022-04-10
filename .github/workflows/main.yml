@@ -4,7 +4,7 @@ on: pull_request
 
 jobs:
   build:
-    runns-on: ubuntu-latest
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v1
@@ -19,4 +19,3 @@ jobs:
 
       - name: Build Project
         run: ./gradlew assemble
-
