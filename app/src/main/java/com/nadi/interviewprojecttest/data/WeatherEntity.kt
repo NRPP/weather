@@ -10,6 +10,6 @@ data class WeatherEntity(
     val icon : String,
     val temp_c : Float,
 
-    @PrimaryKey(autoGenerate = true)
+    @PrimaryKey
     val id: Long = 0
 )

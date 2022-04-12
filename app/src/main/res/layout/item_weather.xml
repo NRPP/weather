@@ -1,73 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <ImageView
-        android:id="@+id/img"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        tools:background="@drawable/ic_launcher_background"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
-    <TextView
-        android:id="@+id/txtcity"
+<!--    <data>-->
+<!--        <variable-->
+<!--            name="response"-->
+<!--            type="com.nadi.interviewprojecttest.service.apiresponce.ResponseWeather" />-->
+<!--    </data>-->
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
 
-        tools:text="London"
-        android:textColor="@color/black"
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
 
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="8dp"
 
-        app:layout_constraintLeft_toRightOf="@id/img"
-        app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/ic_launcher_background"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <!--app:imgBinding="@{response.current.condition.icon}"-->
 
-        />
+        <TextView
+            android:id="@+id/txtcity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
 
-    <TextView
-        android:id="@+id/txttemp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+            android:textColor="@color/black"
 
-        tools:text="16"
-        android:textColor="@color/black"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="8dp"
 
-        android:layout_marginTop="8dp"
-        android:layout_marginStart="8dp"
+            app:layout_constraintLeft_toRightOf="@id/img"
+            app:layout_constraintTop_toTopOf="parent"
 
-        app:layout_constraintLeft_toRightOf="@id/img"
-        app:layout_constraintTop_toBottomOf="@id/txtcity"
+            />
+<!--        android:text="@{response.location.name}"-->
 
-        />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
 
-        android:text=" C"
-        android:textColor="@color/black"
+        <TextView
+            android:id="@+id/txttemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
 
-        android:layout_marginTop="8dp"
+            tools:text="16"
+            android:textColor="@color/black"
 
-        app:layout_constraintLeft_toRightOf="@id/txttemp"
-        app:layout_constraintTop_toBottomOf="@id/txtcity"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
 
-        />
+            app:layout_constraintLeft_toRightOf="@id/img"
+            app:layout_constraintTop_toBottomOf="@id/txtcity"
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0.7dp"
-        android:background="#B4403A3A"
-        android:layout_margin="8dp"
+            />
+<!--        android:text="@{response.current.temp_c}"-->
 
-        app:layout_constraintTop_toBottomOf="@id/img"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            android:text=" C"
+            android:textColor="@color/black"
+
+            android:layout_marginTop="8dp"
+
+            app:layout_constraintLeft_toRightOf="@id/txttemp"
+            app:layout_constraintTop_toBottomOf="@id/txtcity"
+
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.7dp"
+            android:background="#B4403A3A"
+            android:layout_margin="8dp"
+
+            app:layout_constraintTop_toBottomOf="@id/img"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
